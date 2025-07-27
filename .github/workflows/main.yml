@@ -1,0 +1,45 @@
+# Nama alur kerja yang akan muncul di tab Actions GitHub
+name: Deploy to GitHub Pages
+
+# Pemicu: Alur kerja ini akan berjalan setiap kali ada push ke branch 'main'
+on:
+  push:
+    branches:
+      - main
+
+# Izin: Memberikan izin kepada alur kerja untuk menulis ke repositori (untuk deployment)
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Pekerjaan: Serangkaian tugas yang akan dijalankan
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Menjalankan di server virtual Ubuntu
+    steps:
+      # Langkah 1: Mengunduh kode dari repositori Anda
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Langkah 2: Membuat file config.js menggunakan Secret
+      - name: Create config.js
+        run: |
+          echo "const API_KEY = '${{ secrets.CAT_API_KEY }}';" > config.js
+        # Perintah ini membuat file config.js dan mengisi variabel API_KEY
+        # dengan secret yang sudah Anda simpan di Pengaturan GitHub.
+
+      # Langkah 3: Mengonfigurasi GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      # Langkah 4: Mengunggah artefak (semua file proyek) untuk di-deploy
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.' # Mengunggah semua file dari direktori root
+
+      # Langkah 5: Melakukan deployment ke GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

@@ -3,10 +3,20 @@ Selamat datang di Meowpedia! Sebuah ensiklopedia kucing interaktif berbasis web 
 
 Proyek ini dibuat dengan HTML, CSS, dan JavaScript murni, dengan desain yang bersih, menarik, dan sepenuhnya responsif untuk pengalaman terbaik di desktop maupun mobile.
 
-## Tampilan
-(Disarankan untuk mengambil screenshot dari proyek Anda yang sudah berjalan dan meletakkannya di sini agar lebih menarik)
-Contoh tampilan di desktop
-Contoh tampilan di mobile
+## Tampilan Proyek
+
+Berikut adalah tampilan proyek Meowpedia di berbagai perangkat.
+
+### Tampilan Desktop
+<p align="center">
+  <img src="https://github.com/fahroediin/meowpedia/blob/main/preview/web-view.png?raw=true" alt="Tampilan Meowpedia di Desktop" width="85%">
+</p>
+
+### Tampilan Mobile
+<p align="center">
+  <img src="https://github.com/fahroediin/meowpedia/blob/main/preview/mobile-view.png?raw=true" alt="Tampilan Meowpedia di Mobile" width="40%">
+</p>
+
 
 ## Fitur Utama
 - Pencarian Ras Kucing: Pilih dari puluhan ras kucing yang tersedia melalui dropdown yang dinamis.

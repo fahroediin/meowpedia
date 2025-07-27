@@ -1,0 +1,12 @@
+# Abaikan file environment
+.env
+
+# Abaikan file konfigurasi yang berisi kunci API
+config.js
+
+# Abaikan folder dependensi (jika nanti menggunakan Node.js)
+node_modules/
+
+# Abaikan file sistem operasi
+.DS_Store
+Thumbs.db

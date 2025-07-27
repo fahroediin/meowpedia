@@ -1,0 +1,235 @@
+/* General Styling */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #f8f9fa;
+    --accent-color: #e74c3c;
+    --text-color: #34495e;
+    --bg-color: #fdf6e3; /* Warna krem lembut */
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    margin: 0;
+    color: #ffc107; /* Warna kuning cerah */
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Memberi jarak antar elemen */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.controls label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#breed-select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--primary-color);
+    min-width: 250px;
+    cursor: pointer;
+}
+
+#lang-select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color);
+    min-width: 250px;
+    cursor: pointer;
+}
+
+/* Loader */
+#loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--accent-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Content Container & Card */
+#content-container {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+.welcome-cat {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.breed-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.breed-image {
+    flex: 1 1 300px;
+}
+
+.breed-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.breed-details {
+    flex: 2 1 400px;
+}
+
+.breed-details h2 {
+    font-family: 'Fredoka One', cursive;
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.breed-details .tag {
+    display: inline-block;
+    background-color: #e7e7e7;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: #e7e7e7;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 1. Perkecil Header dan Font */
+header h1 {
+    font-size: 2.2rem; /* Perkecil ukuran judul utama */
+}
+
+header p {
+    font-size: 0.9rem; /* Perkecil subjudul */
+}
+
+header {
+    padding: 1.5rem 1rem; /* Kurangi padding atas-bawah di header */
+}
+
+/* 2. Atur Ulang Konten Utama */
+main {
+    margin-top: 1.5rem;
+    padding: 0 1rem; /* Pastikan ada sedikit padding di sisi kiri-kanan */
+}
+
+/* 3. Buat Dropdown Lebih Ramah Mobile */
+.controls {
+    gap: 1rem; /* Kurangi jarak antara dua dropdown */
+}
+
+.controls select {
+    width: 95%; /* Buat dropdown memenuhi lebar layar */
+    min-width: unset; /* Hapus lebar minimum agar tidak kaku */
+    font-size: 0.95rem;
+}
+
+/* 4. Atur Ulang Kartu Informasi Kucing (Paling Penting) */
+#content-container {
+    padding: 1rem; /* Kurangi padding di dalam kartu agar konten lebih lega */
+}
+
+.breed-info {
+    flex-direction: column; /* Paksa gambar dan teks untuk menumpuk secara vertikal */
+    gap: 1.5rem; /* Atur jarak antara gambar dan blok teks */
+}
+
+.breed-details h2 {
+    font-size: 1.8rem; /* Sesuaikan ukuran judul ras */
+    text-align: center; /* Pusatkan judul ras di mobile */
+}
+
+.breed-details p, .breed-details a {
+    font-size: 0.9rem; /* Perkecil sedikit font deskripsi */
+}
+
+.breed-details .tag {
+    font-size: 0.8rem; /* Perkecil ukuran tag */
+}
+
+/* 5. Atur ulang gambar sambutan */
+.welcome-cat {
+    max-width: 250px; /* Perkecil sedikit gambar kucing di awal */
+}
+
+/* Aturan tambahan untuk layar yang sangat kecil (lebar 480px atau kurang) */
+@media (max-width: 480px) {
+header h1 {
+font-size: 2rem;
+}
+#content-container {
+    padding: 1rem 0.8rem;
+}
+
+.breed-details h2 {
+    font-size: 1.6rem;
+}
+}

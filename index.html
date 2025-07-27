@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- (Isi head tetap sama) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowpedia - Ensiklopedia Kucing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- (Isi body tetap sama) -->
+    <header>
+        <h1>🐾 Meowpedia</h1>
+        <p>Temukan Informasi Lengkap Tentang Ras Kucing Favoritmu!</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="breed-select">Pilih Ras Kucing:</label>
+            <select id="breed-select">
+                <option value="">-- Silakan Pilih --</option>
+            </select>
+        </div>
+                <!-- ELEMEN BARU DI SINI -->
+        <div class="language-selector" id="language-controls" style="display: none;">
+            <label for="lang-select">Pilih Bahasa:</label>
+            <select id="lang-select">
+                <option value="en">English (Asli)</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="ar">Arab</option>
+                <option value="de">Jerman</option>
+                <option value="it">Italia</option>
+                <option value="ja">Jepang</option>
+            </select>
+        </div>
+
+        <div id="loader" class="hidden"></div>
+        
+        <div id="content-container">
+            <div class="welcome-message">
+                <h2>Selamat Datang di Meowpedia!</h2>
+                <p>Pilih salah satu ras kucing dari daftar di atas untuk melihat informasi detail, temperamen, dan foto lucunya.</p>
+                <img src="https://cattocdn.com/meow/c23f4aa3-7a9a-4e9a-819d-b9f63a93b039.png" alt="Kucing lucu" class="welcome-cat">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Ditenagai oleh <a href="https://thecatapi.com/" target="_blank">TheCatAPI</a> | Dibuat dengan ❤️</p>
+    </footer>
+
+    <!-- PEMBARUAN DI SINI -->
+    <script src="config.js"></script> <!-- Muat file konfigurasi terlebih dahulu -->
+    <script src="script.js"></script>   <!-- Kemudian muat skrip utama -->
+</body>
+</html>

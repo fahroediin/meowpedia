@@ -20,7 +20,7 @@ jobs:
     steps:
       # Langkah 1: Mengunduh kode dari repositori Anda
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Menggunakan versi terbaru @v4
 
       # Langkah 2: Membuat file config.js menggunakan Secret
       - name: Create config.js
@@ -31,15 +31,18 @@ jobs:
 
       # Langkah 3: Mengonfigurasi GitHub Pages
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4 # Menggunakan versi terbaru @v4
 
       # Langkah 4: Mengunggah artefak (semua file proyek) untuk di-deploy
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3 # Menggunakan versi terbaru @v3
         with:
           path: '.' # Mengunggah semua file dari direktori root
 
       # Langkah 5: Melakukan deployment ke GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4 # Menggunakan versi terbaru @v4```
+ # Langkah 6: Menyelesaikan deployment
+      - name: Complete deployment
+        run: echo "Deployment completed successfully!" # Pesan sukses setelah deployment selesai  

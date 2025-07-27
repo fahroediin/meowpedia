@@ -9,12 +9,12 @@ Berikut adalah tampilan proyek Meowpedia di berbagai perangkat.
 
 ### Tampilan Desktop
 <p align="center">
-  <img src="https://github.com/fahroediin/meowpedia/blob/main/preview/web-view.png?raw=true" alt="Tampilan Meowpedia di Desktop" width="85%">
+  <img src="https://github.com/fahroediin/meowpedia/blob/main/preview/web-preview.png?raw=true" alt="Tampilan Meowpedia di Desktop" width="85%">
 </p>
 
 ### Tampilan Mobile
 <p align="center">
-  <img src="https://github.com/fahroediin/meowpedia/blob/main/preview/mobile-view.png?raw=true" alt="Tampilan Meowpedia di Mobile" width="40%">
+  <img src="https://github.com/fahroediin/meowpedia/blob/main/preview/mobile-preview.png?raw=true" alt="Tampilan Meowpedia di Mobile" width="40%">
 </p>
 
 

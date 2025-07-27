@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- (Isi head tetap sama) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meowpedia - Ensiklopedia Kucing</title>
@@ -12,31 +11,40 @@
 </head>
 <body>
 
-    <!-- (Isi body tetap sama) -->
     <header>
         <h1>🐾 Meowpedia</h1>
         <p>Temukan Informasi Lengkap Tentang Ras Kucing Favoritmu!</p>
     </header>
 
     <main>
+        <!-- ================================================== -->
+        <!--           PERBAIKAN UTAMA ADA DI SINI              -->
+        <!-- ================================================== -->
         <div class="controls">
-            <label for="breed-select">Pilih Ras Kucing:</label>
-            <select id="breed-select">
-                <option value="">-- Silakan Pilih --</option>
-            </select>
+            <!-- Kontrol 1: Pilihan Ras -->
+            <div>
+                <label for="breed-select">Pilih Ras Kucing:</label>
+                <select id="breed-select">
+                    <option value="">-- Silakan Pilih --</option>
+                </select>
+            </div>
+            
+            <!-- Kontrol 2: Pilihan Bahasa (SEKARANG DI DALAM .controls) -->
+            <div class="language-selector" id="language-controls" style="display: none;">
+                <label for="lang-select">Pilih Bahasa:</label>
+                <select id="lang-select">
+                    <option value="en">English (Asli)</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ar">Arab</option>
+                    <option value="de">Jerman</option>
+                    <option value="it">Italia</option>
+                    <option value="ja">Jepang</option>
+                </select>
+            </div>
         </div>
-                <!-- ELEMEN BARU DI SINI -->
-        <div class="language-selector" id="language-controls" style="display: none;">
-            <label for="lang-select">Pilih Bahasa:</label>
-            <select id="lang-select">
-                <option value="en">English (Asli)</option>
-                <option value="id">Bahasa Indonesia</option>
-                <option value="ar">Arab</option>
-                <option value="de">Jerman</option>
-                <option value="it">Italia</option>
-                <option value="ja">Jepang</option>
-            </select>
-        </div>
+        <!-- ================================================== -->
+        <!--                 AKHIR PERBAIKAN                    -->
+        <!-- ================================================== -->
 
         <div id="loader" class="hidden"></div>
         
@@ -45,8 +53,8 @@
                 <h2>Selamat Datang di Meowpedia!</h2>
                 <p>Pilih salah satu ras kucing dari daftar di atas untuk melihat informasi detail, temperamen, dan foto lucunya.</p>
                 
-                <!-- GAMBAR YANG SUDAH DIPERBAIKI -->
-                <img src="https://cattocdn.com/meow/c23f4aa3-7a9a-4e9a-819d-b9f63a93b039.png" alt="Siwi" class="welcome-cat">
+                <!-- Link gambar ini sudah benar -->
+                <img src="image/siwi.png" alt="Siwi" class="welcome-cat">
                 
             </div>
         </div>
@@ -56,8 +64,7 @@
         <p>Developed With <a href="https://thecatapi.com/" target="_blank">TheCatAPI</a> | Created by Fahrudin</p>
     </footer>
 
-    <!-- PEMBARUAN DI SINI -->
-    <script src="config.js"></script> <!-- Muat file konfigurasi terlebih dahulu -->
-    <script src="script.js"></script>   <!-- Kemudian muat skrip utama -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

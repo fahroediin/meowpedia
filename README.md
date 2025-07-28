@@ -7,7 +7,7 @@ Proyek ini dibuat dengan HTML, CSS, dan JavaScript murni, dengan desain yang ber
 
 Berikut adalah tampilan proyek Meowpedia di berbagai perangkat.
 
-## Github Pages
+### Github Pages
 https://fahroediin.github.io/meowpedia/
 
 ### Tampilan Desktop
